@@ -225,7 +225,7 @@ function reverseip(){
 	$ch = curl_init();
 	curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
 	curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-	curl_setopt($ch, CURLOPT_URL,'https://api.hackertarget.com/reverseip/?q='.$target);
+	curl_setopt($ch, CURLOPT_URL,'https://api.hackertarget.com/reverseiplookup/?q='.$target);
 	$result=curl_exec($ch);
 	curl_close($ch);
 	$isi = "[ ".date('d-m-Y H:i:s')." ]-[ ".$target." ]-[ reverseip ]\n\n".$result."	";
